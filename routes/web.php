@@ -12,9 +12,13 @@ use App\Http\Controllers\PacoteController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+    Route::view('/', 'home');
+    Route::view('/login', 'login');
+    Route::view('/animais', 'animais');
+    Route::view('/animal', 'animal-detalhes');
+    Route::view('/cadastro-animal', 'cadastro-animal');
+    Route::view('/dicas', 'dicas');
+    Route::view('/denuncia', 'denuncia');
+    Route::view('/admin', 'admin');
 
 Route::get('/pacotes', [PacoteController::class, 'index']);

@@ -1,46 +1,57 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>DOGMEET</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DogMeet</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="/">
-                DOGMEET
-            </a>
-            <div>
-                <ul class="navbar-nav d-flex flex-row gap-3">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/animais">
-                            Animais
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/dicas">
-                            Dicas
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/denuncia">
-                            Denúncia
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/login">
-                            Login
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <div class="container mt-4">
-        @yield('content')
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            DOGMEET
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/animais">
+                        Animais
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/dicas">
+                        Dicas
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/denuncia">
+                        Denúncia
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin">
+                        Admin
+                    </a>
+                </li>
+            </ul>
+            <a href="/login" class="btn btn-outline-light">
+                Login
+            </a>
+        </div>
     </div>
+</nav>
+
+<div class="container mt-4">
+    @yield('content')
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

@@ -2,26 +2,66 @@
 
 @section('content')
 
-<h2>Denúncia de Maus-Tratos</h2>
-<p>
-    Utilize este espaço para denunciar abandono ou maus-tratos.
-</p>
-<form>
-    <div class="mb-3">
-        <label>Descrição</label>
-        <textarea class="form-control"></textarea>
-    </div>
-    <div class="mb-3">
-        <label>Local</label>
-        <input type="text" class="form-control">
-    </div>
-    <div class="mb-3">
-        <label>Contato</label>
-        <input type="text" class="form-control">
-    </div>
-    <button class="btn btn-danger">
-        Enviar denúncia
-    </button>
-</form>
+<h2 class="mb-4">Registrar Denúncia</h2>
+
+<div class="card p-4">
+
+    <form>
+
+        <div class="mb-3">
+            <label class="form-label">
+                Nome do Denunciante
+            </label>
+
+            <input
+                type="text"
+                class="form-control"
+                placeholder="Digite seu nome">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">
+                Endereço da Ocorrência
+            </label>
+
+            <input
+                type="text"
+                class="form-control"
+                placeholder="Informe o endereço">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">
+                Tipo da Denúncia
+            </label>
+
+            <select class="form-select">
+                <option>Maus-tratos</option>
+                <option>Abandono</option>
+                <option>Falta de alimentação</option>
+                <option>Outros</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">
+                Descrição
+            </label>
+
+            <textarea
+                class="form-control"
+                rows="5"
+                placeholder="Descreva a situação"></textarea>
+        </div>
+
+        <button
+            type="submit"
+            class="btn btn-danger">
+            Enviar Denúncia
+        </button>
+
+    </form>
+
+</div>
 
 @endsection

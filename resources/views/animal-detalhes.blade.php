@@ -4,23 +4,40 @@
 
 <div class="row">
     <div class="col-md-6">
-        <div class="bg-secondary" style="height:400px;">
-        </div>
+        <img
+            src="{{ asset('assets/DogStock.jpg') }}"
+            class="img-fluid rounded"
+            style="height:400px; width:100%; object-fit:cover;">
     </div>
-
     <div class="col-md-6">
-        <h2>Nome do Animal</h2>
-        <p><strong>Idade:</strong> 3 anos</p>
-        <p><strong>Raça:</strong> SRD</p>
+        <h1>{{ $animal->nome }}</h1>
         <p>
-            Descrição completa do animal.
+            <strong>Espécie:</strong>
+            {{ $animal->especie }}
         </p>
         <p>
-            Contato do responsável.
+            <strong>Raça:</strong>
+            {{ $animal->raca }}
         </p>
-        <button class="btn btn-success">
-            Entrar em contato
-        </button>
+        <p>
+            <strong>Idade:</strong>
+            {{ $animal->idade }}
+        </p>
+        <p>
+            <strong>Status:</strong>
+            {{ $animal->status }}
+        </p>
+        <p>
+            <strong>Descrição:</strong>
+            {{ $animal->descricao }}
+        </p>
+        <p>
+            <strong>Contato:</strong>
+            {{ $animal->contato }}
+        </p>
+        <a href="/animais" class="btn btn-secondary">
+            Voltar
+        </a>
     </div>
 </div>
 
